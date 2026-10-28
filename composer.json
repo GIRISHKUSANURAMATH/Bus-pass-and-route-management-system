@@ -1,0 +1,19 @@
+{
+    "name": "sksvmacet/bus-pass-management",
+    "description": "SKSVMACET Bus Pass & Route Management System (PHP + MySQL + Leaflet)",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-fileinfo": "*",
+        "ext-mbstring": "*",
+        "ext-json": "*"
+    },
+    "scripts": {
+        "serve": "php -S 127.0.0.1:8000 -t public",
+        "lint": "find config src public -name '*.php' -print0 | xargs -0 -n1 php -l"
+    },
+    "config": { "platform-check": true }
+}

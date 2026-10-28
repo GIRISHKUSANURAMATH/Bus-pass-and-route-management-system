@@ -1,0 +1,85 @@
+/* SKSVMACET Bus Pass - application styles */
+:root {
+  --brand: #13306b;
+  --brand-2: #1d4ed8;
+  --accent: #f59e0b;
+  --surface: #f4f6fb;
+  --sidebar-w: 250px;
+}
+body { background: var(--surface); font-size: .95rem; }
+.topbar { background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.brand-mark { display:inline-flex; width:34px; height:34px; border-radius:9px; background:var(--accent); color:#111; align-items:center; justify-content:center; font-size:1.1rem; }
+.sidebar { width: var(--sidebar-w); min-height: calc(100vh - 56px); background:#fff; border-right:1px solid #e5e7eb; }
+@media (min-width: 992px) { .sidebar { position: sticky; top: 56px; height: calc(100vh - 56px); overflow-y: auto; flex-shrink: 0; } }
+.sidebar-role { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:#6b7280; padding:1rem 1.25rem .5rem; font-weight:600; }
+.sidebar .nav-link { color:#1f2937; padding:.55rem 1.25rem; border-left:3px solid transparent; }
+.sidebar .nav-link i { width:1.4rem; display:inline-block; color:#6b7280; }
+.sidebar .nav-link:hover { background:#f3f4f6; }
+.sidebar .nav-link.active { background:#eef2ff; border-left-color:var(--brand-2); color:var(--brand); font-weight:600; }
+.sidebar .nav-link.active i { color:var(--brand-2); }
+.content { min-width:0; display:flex; flex-direction:column; min-height: calc(100vh - 56px); }
+.content > .container-fluid { flex: 1; }
+.page-title { font-size:1.45rem; font-weight:700; color:var(--brand); margin-bottom:1rem; }
+.app-footer { text-align:center; color:#9ca3af; font-size:.8rem; padding:1rem; }
+.card { border:0; box-shadow: 0 1px 3px rgba(16,24,40,.08); border-radius:12px; }
+.card-header { background:#fff; font-weight:600; border-bottom:1px solid #eef0f4; }
+.stat-card { display:flex; gap:.9rem; align-items:center; background:#fff; border-radius:12px; padding:1rem 1.1rem; box-shadow:0 1px 3px rgba(16,24,40,.08); border-left:4px solid; height:100%; }
+.stat-icon { font-size:1.7rem; }
+.stat-value { font-size:1.35rem; font-weight:700; line-height:1.1; }
+.stat-label { color:#6b7280; font-size:.8rem; }
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table-responsive { border-radius: 10px; }
+.quick-action { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.4rem; padding:1.1rem .5rem; background:#fff; border-radius:12px; text-decoration:none; color:var(--brand); box-shadow:0 1px 3px rgba(16,24,40,.08); height:100%; text-align:center; font-weight:600; }
+.quick-action i { font-size:1.6rem; color:var(--brand-2); }
+.quick-action:hover { background:#eef2ff; }
+
+/* Guest pages */
+.guest { background: radial-gradient(circle at top, #1d4ed8 0, #13306b 55%, #0b1b3f 100%); min-height:100vh; }
+.guest-main { min-height:100vh; display:flex; align-items:center; justify-content:center; padding: 1.5rem 1rem; }
+.guest-card { width:100%; max-width:460px; border-radius:16px; }
+.guest-card.wide { max-width: 860px; }
+.hero h1 { color:#fff; font-weight:800; }
+.hero p { color:#cbd5e1; }
+.role-tile { display:block; background:#fff; border-radius:14px; padding:1.4rem; text-decoration:none; color:var(--brand); box-shadow:0 8px 24px rgba(0,0,0,.18); height:100%; }
+.role-tile i { font-size:2rem; color:var(--brand-2); }
+.role-tile:hover { transform: translateY(-2px); }
+
+/* Payment */
+.qr-frame { background:#fff; border:2px dashed #cbd5e1; border-radius:12px; padding:.75rem; text-align:center; }
+.qr-frame img { max-width:100%; height:auto; max-height:560px; }
+.amount-pill { font-size:1.8rem; font-weight:800; color:var(--brand); }
+
+/* Bus pass */
+.bus-pass { max-width:430px; margin:0 auto; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 6px 24px rgba(16,24,40,.18); border:1px solid #dbe2f0; }
+.bus-pass .bp-head { background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#fff; padding:1rem 1.25rem; text-align:center; }
+.bus-pass .bp-head .college { font-size:1.5rem; font-weight:800; letter-spacing:.06em; }
+.bus-pass .bp-head .title { font-size:.85rem; letter-spacing:.3em; color:#fde68a; }
+.bus-pass .bp-body { padding:1rem 1.25rem; }
+.bus-pass dl { display:grid; grid-template-columns: 42% 58%; margin:0; row-gap:.3rem; font-size:.88rem; }
+.bus-pass dt { color:#6b7280; font-weight:500; }
+.bus-pass dd { margin:0; font-weight:600; word-break: break-word; }
+.bus-pass .bp-qr { text-align:center; padding:.75rem 0 1rem; border-top:1px dashed #cbd5e1; }
+.bus-pass .bp-qr canvas, .bus-pass .bp-qr img, .bus-pass .bp-qr svg { width:170px; height:170px; }
+.bus-pass .bp-photo { width:72px; height:88px; object-fit:cover; border-radius:8px; border:2px solid #e5e7eb; }
+
+/* Maps & tracking */
+.map-lg { height: 520px; border-radius:12px; z-index: 1; }
+.map-md { height: 380px; border-radius:12px; z-index: 1; }
+.map-sm { height: 280px; border-radius:12px; z-index: 1; }
+.live-badge { font-size: .95rem; padding:.45rem .8rem; }
+.bus-marker { background: var(--brand-2); color:#fff; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border:3px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,.4); }
+.bus-marker.sim { background:#9333ea; }
+.bus-marker.stale { background:#6b7280; }
+.stop-marker { background:#fff; border:3px solid var(--brand-2); border-radius:50%; width:16px; height:16px; }
+.stop-marker.board { border-color:#16a34a; background:#bbf7d0; width:22px; height:22px; }
+.stop-marker.dest { border-color:#dc2626; background:#fecaca; width:22px; height:22px; }
+.sim-banner { background:#f3e8ff; color:#6b21a8; border:1px solid #d8b4fe; font-weight:700; letter-spacing:.05em; }
+.gps-readout { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.btn-xl { padding: .9rem 1.4rem; font-size:1.1rem; font-weight:700; }
+
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area { position: absolute; left: 0; top: 0; width: 100%; }
+  .bus-pass { box-shadow:none; }
+}

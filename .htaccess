@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------------
+# Project-root protection (XAMPP serves the whole folder from htdocs).
+# Only /public is meant to be reachable from the browser.
+# ---------------------------------------------------------------------
+Options -Indexes
+
+# Never serve dotfiles (.env, .git ...) or source/data files
+<FilesMatch "(^\.|\.(env|sql|md|lock|log|ini|sh|bak)$|^composer\.json$)">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Block private folders even if their own .htaccess is removed
+    RewriteRule ^(config|src|database|storage|uploads|docs|vendor|\.vscode|\.git)(/|$) - [F,L]
+    # Opening the project folder goes to the app
+    RewriteRule ^$ public/ [R=302,L]
+</IfModule>

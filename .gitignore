@@ -1,0 +1,21 @@
+# secrets
+.env
+# user uploads & runtime data
+/uploads/payment/*
+/uploads/profiles/*
+!/uploads/**/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+# admin-uploaded replacement QR codes (the official default QR stays tracked)
+/public/assets/qr/*
+!/public/assets/qr/sksvmacet-payment-qr.jpg
+!/public/assets/qr/sksvmacet-payment-qr-cropped.png
+# tooling
+/vendor/
+/node_modules/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.zip

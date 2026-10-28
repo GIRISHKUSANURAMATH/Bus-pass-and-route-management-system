@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always unset X-Powered-By
+</IfModule>
+
+# Friendly error page for 404
+ErrorDocument 404 "Page not found"
