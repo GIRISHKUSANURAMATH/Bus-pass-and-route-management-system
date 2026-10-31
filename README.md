@@ -66,8 +66,8 @@ payment QR**).
 |---|---|---|---|
 | Admin | `admin` | `Admin@12345` | one payment waiting for verification |
 | Student | `2KA24CS001` | `Student@123` | has an **active pass** (Hubballi → Campus) |
-| Student | `2KA23EC014` | `Student@123` | payment **submitted, awaiting verification** |
-| Student | `2KA25ME021` | `Student@123` | registered, no application yet |
+| Student | `2KA23EC001` | `Student@123` | payment **submitted, awaiting verification** |
+| Student | `2KA25ME001` | `Student@123` | registered, no application yet |
 | Driver | `driver1` | `Driver@123` | BUS001 on Route 1 (Laxmeshwar ↔ Hubballi) |
 | Driver | `driver2` | `Driver@123` | BUS002 on Route 2 (Laxmeshwar ↔ Gadag) |
 
